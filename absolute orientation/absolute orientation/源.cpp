@@ -145,9 +145,9 @@ int main()
 			fprintf(fout, "²Ð²î(m)£º\nid    V_Q\n");
 			for (int i = 0; i < n; i++)
 			{
-				matEpsilonX = matEpsilon[3 * i][0];
-				matEpsilonY = matEpsilon[3 * i + 1][0];
-				matEpsilonZ = matEpsilon[3 * i + 2][0];
+				matEpsilonX[i][0] = matEpsilon[3 * i][0];
+				matEpsilonY[i][0] = matEpsilon[3 * i + 1][0];
+				matEpsilonZ[i][0] = matEpsilon[3 * i + 2][0];
 				fprintf(fout, "Xtp%d\t    %f\n", i + 1, matEpsilon[3 * i][0]);
 				fprintf(fout, "Ytp%d\t    %f\n", i + 1, matEpsilon[3 * i + 1][0]);
 				fprintf(fout, "Ztp%d\t    %f\n", i + 1, matEpsilon[3 * i + 2][0]);
@@ -159,14 +159,14 @@ int main()
 			printf("rms Y(m)£º\n");
 			printf("%f\n", sqrt((matEpsilonY.transpose() * matEpsilonY)[0][0] / n));
 			printf("rms Z(m)£º\n");
-			printf("%f\n", sqrt((matEpsilonY.transpose() * matEpsilonZ)[0][0] / n));
+			printf("%f\n", sqrt((matEpsilonZ.transpose() * matEpsilonZ)[0][0] / n));
 
 			fprintf(fout, "rms X(m)£º\n");
 			fprintf(fout, "%f\n", sqrt((matEpsilonX.transpose() * matEpsilonX)[0][0] / n));
 			fprintf(fout, "rms Y(m)£º\n");
 			fprintf(fout, "%f\n", sqrt((matEpsilonY.transpose() * matEpsilonY)[0][0] / n));
 			fprintf(fout, "rms Z(m)£º\n");
-			fprintf(fout, "%f\n", sqrt((matEpsilonY.transpose() * matEpsilonZ)[0][0] / n));
+			fprintf(fout, "%f\n", sqrt((matEpsilonZ.transpose() * matEpsilonZ)[0][0] / n));
 			break;
 		}
 
@@ -372,9 +372,9 @@ int main()
 			fprintf(fout, "²Ð²î(m)£º\nid    V_Q\n");
 			for (int i = 0; i < n; i++)
 			{
-				matEpsilonX = matEpsilon[3 * i][0];
-				matEpsilonY = matEpsilon[3 * i + 1][0];
-				matEpsilonZ = matEpsilon[3 * i + 2][0];
+				matEpsilonX[i][0] = matEpsilon[3 * i][0];
+				matEpsilonY[i][0] = matEpsilon[3 * i + 1][0];
+				matEpsilonZ[i][0] = matEpsilon[3 * i + 2][0];
 				fprintf(fout, "Xtp%d\t    %f\n", i + 1, matEpsilon[3 * i][0]);
 				fprintf(fout, "Ytp%d\t    %f\n", i + 1, matEpsilon[3 * i + 1][0]);
 				fprintf(fout, "Ztp%d\t    %f\n", i + 1, matEpsilon[3 * i + 2][0]);
@@ -386,14 +386,14 @@ int main()
 			printf("rms Y(m)£º\n");
 			printf("%f\n", sqrt((matEpsilonY.transpose() * matEpsilonY)[0][0] / n));
 			printf("rms Z(m)£º\n");
-			printf("%f\n", sqrt((matEpsilonY.transpose()* matEpsilonZ)[0][0] / n));
+			printf("%f\n", sqrt((matEpsilonZ.transpose()* matEpsilonZ)[0][0] / n));
 
 			fprintf(fout, "rms X(m)£º\n");
 			fprintf(fout, "%f\n", sqrt((matEpsilonX.transpose() * matEpsilonX)[0][0] / n));
 			fprintf(fout, "rms Y(m)£º\n");
 			fprintf(fout, "%f\n", sqrt((matEpsilonY.transpose() * matEpsilonY)[0][0] / n));
 			fprintf(fout, "rms Z(m)£º\n");
-			fprintf(fout, "%f\n", sqrt((matEpsilonY.transpose()* matEpsilonZ)[0][0] / n));
+			fprintf(fout, "%f\n", sqrt((matEpsilonZ.transpose()* matEpsilonZ)[0][0] / n));
 			break;
 		}
 
